@@ -539,27 +539,101 @@ td strong {
 .footer {
   background: #09242b;
   color: #fff;
-  padding: 50px 0;
+  padding: 60px 0 45px;
+  border-top: 1px solid rgba(217,179,107,.2);
 }
 
 .footer-grid {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1.3fr;
+  gap: 48px;
+  align-items: start;
 }
 
-.footer small,
-.footer p {
-  color: rgba(255,255,255,.6);
-  font-size: 12px;
+.footer-brand p {
+  color: rgba(255,255,255,.68);
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 14px;
+  max-width: 320px;
+}
+
+.footer-title {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  margin-bottom: 16px;
+  text-transform: uppercase;
 }
 
 .footer-links {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  color: rgba(255,255,255,.75);
+  flex-direction: column;
+  gap: 10px;
   font-size: 13px;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,.75);
+  transition: color .2s;
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 13px;
+  color: rgba(255,255,255,.78);
+  line-height: 1.7;
+}
+
+.footer-contact .contact-item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.footer-contact .contact-label {
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 600;
+  min-width: 60px;
+  letter-spacing: .08em;
+  opacity: .9;
+}
+
+.footer-contact a {
+  color: inherit;
+  transition: color .2s;
+}
+
+.footer-contact a:hover {
+  color: var(--gold);
+}
+
+.footer-contact .phone-highlight {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: .05em;
+}
+
+.footer-bottom {
+  margin-top: 45px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255,255,255,.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 11px;
+  color: rgba(255,255,255,.5);
 }
 
 .sub-hero {
@@ -1078,7 +1152,20 @@ td strong {
     grid-template-columns: 1fr;
   }
 
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
   .footer-links {
-    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 }
